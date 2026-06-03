@@ -36,6 +36,7 @@ This project aims to investigate several biomedical questions, including:
 - Does obesity associate with elevated inflammatory markers such as CRP and NLR?
 - Do smokers show elevated white blood cell and neutrophil counts?
 - Is alcohol consumption associated with elevated liver biomarkers such as GGT?
+- Is Mean Cell Volume (MCV) associated with alcohol consumption and liver biomarkers? 
 - Are triglycerides and HbA1c associated with inflammatory biomarkers?
 - Does waist-to-hip ratio associate more strongly with inflammation than BMI?
 - Which haematological biomarkers show the strongest associations with systemic inflammation?
@@ -49,8 +50,9 @@ Data used in this project originates from:
 
 - **NHANES** (National Health and Nutrition Examination Survey)
 - Conducted by the **CDC** (Centers for Disease Control and Prevention)
+- NHANES August 2021-August 2023 Dataset
 
-🔗 https://www.cdc.gov/nchs/nhanes/index.htm
+🔗 https://wwwn.cdc.gov/nchs/nhanes/Default.aspx
 
 NHANES combines:
 - Interviews
