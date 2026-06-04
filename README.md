@@ -52,7 +52,7 @@ Data used in this project originates from:
 - Conducted by the **CDC** (Centers for Disease Control and Prevention)
 - NHANES August 2021-August 2023 Dataset
 
-🔗 https://wwwn.cdc.gov/nchs/nhanes/Default.aspx
+🔗 https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023
 
 NHANES combines:
 - Interviews
