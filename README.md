@@ -1,274 +1,68 @@
-# 🩸 Biomedical Data Science Analysis of Haematological and Inflammatory Biomarkers in NHANES Adults
-
----
-
-## 📌 Project Overview
-
-This project explores relationships between haematological parameters, inflammatory biomarkers and metabolic dysfunction using data from the National Health and Nutrition Examination Survey (NHANES).
-
-The aim is to investigate how obesity, smoking, alcohol consumption and metabolic health relate to changes in blood-based biomarkers associated with systemic inflammation and cardiometabolic risk in adults.
-
-The project combines biomedical domain knowledge with data analytics, statistical analysis and data science techniques using Python.
-
----
-
-# 🎯 Project Objectives
-
-- Build a clean analytical dataset from multiple NHANES modules
-- Explore missingness, distributions and outliers in biomedical data
-- Investigate relationships between:
-  - Obesity and systemic inflammation
-  - Smoking and inflammatory blood markers
-  - Alcohol consumption and liver biomarkers
-  - Diabetes and metabolic dysfunction
-- Create meaningful derived biomarkers and ratios
-- Apply statistical analysis to investigate biomarker relationships
-- Explore patterns and subgroup structures within haematological and inflammatory profiles
-- Develop predictive and exploratory biomedical data science workflows
-- Generate clinically interpretable visualisations and findings
-
----
-
-# 🔬 Research Questions
-
-This project aims to investigate several biomedical questions, including:
-
-- Does obesity associate with elevated inflammatory markers such as CRP and NLR?
-- Do smokers show elevated white blood cell and neutrophil counts?
-- Is alcohol consumption associated with elevated liver biomarkers such as GGT?
-- Is Mean Cell Volume (MCV) associated with alcohol consumption and liver biomarkers? 
-- Are triglycerides and HbA1c associated with inflammatory biomarkers?
-- Does waist-to-hip ratio associate more strongly with inflammation than BMI?
-- Which haematological biomarkers show the strongest associations with systemic inflammation?
-- Can biomarker patterns identify distinct inflammatory or metabolic phenotypes within the population?
-
----
-
-# 🗂️ Data Source
-
-Data used in this project originates from:
-
-- **NHANES** (National Health and Nutrition Examination Survey)
-- Conducted by the **CDC** (Centers for Disease Control and Prevention)
-- NHANES August 2021-August 2023 Dataset
-
-🔗 https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023
-
-NHANES combines:
-- Interviews
-- Physical examinations
-- Laboratory testing
-
-to assess the health and nutritional status of the U.S. population.
-
----
-
-# 📦 Included NHANES Modules
-
-| Module | Description |
-|---|---|
-| DEMO_L | Demographics |
-| BMX_L | Body measurements |
-| CBC_L | Complete blood count |
-| BIOPRO_L | Biochemistry profile |
-| BPXO_L | Blood pressure readings |
-| BPQ_L | Blood pressure/cholesterol questionnaire |
-| DIQ_L | Diabetes questionnaire |
-| SMQ_L | Smoking questionnaire |
-| ALQ_L | Alcohol questionnaire |
-| HSCRP_L | High sensitivity CRP |
-| HDL_L | HDL cholesterol |
-| TCHOL_L | Total cholesterol |
-| TRIGLY_L | Triglycerides & LDL |
-| GHB_L | HbA1c |
-| VID_L | Vitamin D |
-| FERTIN_L | Ferritin |
-| FOLFMS_L | Folate |
-
----
-
-# 🛠️ Technologies Used
-
-- Python
-- pandas
-- NumPy
-- matplotlib
-- seaborn
-- Jupyter Notebook
-
-Potential additional libraries:
-- scipy
-- statsmodels
-- scikit-learn
-
----
-
-# ⚙️ Data Processing Workflow
-
-## 1️⃣ Data Import
-- Imported NHANES `.xpt` files using pandas
-- Loaded datasets into Python using loops and dictionaries
-
-## 2️⃣ Variable Selection
-- Selected clinically relevant haematological, inflammatory and metabolic biomarkers
-- Removed unnecessary or duplicate measurements
-- Filtered dataset to adult participants only (`age >= 18`)
-
-## 3️⃣ Data Structuring
-- Grouped datasets into logical biomedical domains
-- Merged datasets using participant ID (`SEQN`)
-
-## 4️⃣ Feature Engineering
-
-Created derived variables including:
-- Mean systolic blood pressure
-- Mean diastolic blood pressure
-- Mean pulse
-- Waist-to-hip ratio
-- Neutrophil-to-lymphocyte ratio (NLR)
-- Non-HDL cholesterol
-
-## 5️⃣ Data Cleaning
-- Removed invalid questionnaire codes
-- Converted questionnaire variables to categorical datatypes
-- Standardised column names
-- Investigated missingness and outliers
-- Explored skewed biomarker distributions
-
-## 6️⃣ Exploratory Data Analysis (EDA)
-
-Planned EDA includes:
-- Distribution analysis
-- Missingness visualisation
-- Outlier assessment
-- Correlation heatmaps
-- Scatterplots
-- Grouped biomarker comparisons
-- Histograms and boxplots
-- Haematological and inflammatory biomarker relationship exploration
-
----
-
-# 📊 Planned Statistical Analysis
-
-The project will include statistical investigation of biomarker relationships using approaches such as:
-
-- Correlation analysis
-- Group comparisons
-- Association analysis
-- Regression modelling
-- Subgroup analysis
-- Inflammatory marker association analysis
-
-Potential analyses include:
-- Smokers vs non-smokers inflammatory profiles
-- Obesity vs CRP/NLR relationships
-- Alcohol intake vs liver biomarker analysis
-- HbA1c vs inflammatory biomarker relationships
-- Predictors of elevated inflammatory markers
-
----
-
-# 🤖 Planned Data Science Approaches
-
-The project will also explore more advanced data science techniques to investigate hidden structure and predictive relationships within the dataset.
-
-Planned approaches include:
-- Identification of biomarker-based population subgroups
-- Exploration of inflammatory and haematological phenotypes
-- Pattern recognition within inflammatory and metabolic biomarkers
-- Feature importance analysis
-- Predictive modelling of inflammatory and metabolic outcomes
-- Dimensionality reduction and high-dimensional data exploration
-- Cluster and subgroup visualisation
-
-Potential goals include:
-- Identifying distinct inflammatory phenotypes
-- Exploring haematological patterns associated with metabolic dysfunction
-- Investigating relationships between obesity, inflammation and blood-based biomarkers
-- Understanding which biomarkers contribute most strongly to inflammatory and cardiometabolic risk patterns
-
----
-
-# 🧪 Key Variables of Interest
-
-## 🩸 Haematological Biomarkers
-- WBC
-- Neutrophils
-- Lymphocytes
-- Monocytes
-- NLR
-- Haemoglobin
-- Hematocrit
-- MCV
-- MCHC
-- RDW
-- Platelets
-
-## 🔥 Inflammatory Biomarkers
-- CRP
-- Ferritin
-
-## 🍬 Metabolic Biomarkers
-- HbA1c
-- Glucose
-- Triglycerides
-- HDL
-- LDL
-- Non-HDL cholesterol
-
-## 🧫 Liver Biomarkers
-- ALT
-- AST
-- GGT
-
-## 📏 Anthropometric Variables
-- BMI
-- Waist circumference
-- Waist-to-hip ratio
-
-## 🚬 Lifestyle Variables
-- Smoking status
-- Alcohol consumption
-
----
-
-# 🚧 Current Status
-
-### ✅ Completed
-- Dataset import
-- Variable selection
-- Dataset merging
-- Adult cohort filtering
-- Initial cleaning
-- Questionnaire code cleaning
-- Derived biomarker creation
-- Missingness exploration
-- Initial EDA
-
-### 🔄 In Progress
-- Distribution analysis
-- Outlier assessment
-- Correlation analysis
-- Statistical testing
-
----
-
-# 🔮 Future Work
-
-Potential future extensions include:
-- Advanced predictive modelling
-- Biomarker clustering analysis
-- Risk stratification approaches
-- Additional subgroup analyses
-- Expanded multivariable analysis
-- Additional visual analytics
-- Model comparison and evaluation
-
----
-
-# ⚠️ Disclaimer
-
-NHANES data is publicly available and fully anonymised.
-
-This project is intended solely for educational and analytical purposes and does not constitute clinical research or medical advice.
+🩸 Biomedical Data Science Analysis of Inflammatory and Metabolic Biomarkers
+📌 Project Metadata
+
+Data Source: NHANES 2021–2023
+
+Population: US adults aged ≥18 years
+
+Sample Size: ~6,300 participants (varies by analysis)
+
+Domain: Biomedical Data Analytics & Data Science
+
+🔍 Project Summary
+
+This project investigates relationships between obesity, smoking, alcohol consumption, metabolic dysfunction and systemic inflammation using nationally representative NHANES data.
+
+Statistical and machine learning approaches were used to identify inflammatory and metabolic biomarker patterns, uncover population subgroups and develop predictive models for elevated CRP concentrations.
+
+The project combines biomedical expertise with modern data analytics techniques including correlation analysis, regression modelling, Principal Component Analysis (PCA), K-Means clustering and Logistic Regression.
+
+📘 Project Structure
+1. Data Acquisition & Integration
+NHANES module selection
+Dataset merging
+Adult cohort creation
+2. Data Cleaning & Feature Engineering
+Missing value assessment
+Outlier exploration
+Biomarker creation
+Smoking and alcohol scoring
+3. Exploratory Data Analysis
+Distribution analysis
+Biomarker visualisation
+Group comparisons
+4. Statistical Analysis
+Correlation analysis
+Smoking vs haematology
+Alcohol vs liver biomarkers
+HbA1c and triglycerides vs CRP
+5. Principal Component Analysis (PCA)
+Dimensionality reduction
+Identification of dominant biomarker patterns
+6. K-Means Clustering
+Discovery of inflammatory and metabolic phenotypes
+Participant subgroup analysis
+7. Predictive Modelling
+Logistic Regression
+Elevated CRP prediction
+Model evaluation
+8. Feature Importance Analysis
+Predictor coefficient interpretation
+Identification of key inflammatory drivers
+9. Conclusions & Clinical Interpretation
+
+🛠️ Technology Stack
+
+Python · pandas · NumPy · matplotlib · seaborn · scipy · statsmodels · scikit-learn · Jupyter Notebook
+
+✨ Key Findings
+Smoking was associated with elevated WBC and neutrophil counts.
+Alcohol quantity showed a stronger relationship with GGT than drinking frequency.
+Participants with diabetes and elevated triglycerides exhibited substantially higher CRP concentrations.
+PCA identified distinct inflammatory and metabolic dimensions within the biomarker space.
+K-Means clustering identified three participant phenotypes:
+Lower-risk profile
+Inflammatory phenotype
+Metabolic phenotype
+Logistic Regression achieved 75.8% accuracy in predicting elevated CRP.
+BMI emerged as the strongest predictor of systemic inflammation across all analytical approaches.
